@@ -1,0 +1,9 @@
+.app-div {
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: beige;
+}
