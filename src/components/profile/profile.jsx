@@ -1,34 +1,34 @@
 import React from 'react';
-import './profile.css';
+import css from './profile.module.css';
 import propTypes from 'prop-types';
 
 export const Profile = ({ avatar='./components/images/user-icon.jpg', username, tag, location, stats }) =>{
     return (
-        <div className='profile'>
+        <div className={css.profile}>
 
-            <div className='description'>
-                <img className='avatar'
+            <div className={css.description}>
+                <img className={css.avatar}
                     src={avatar}
                     alt="User avatar"
                 />
-                <p className='name'>{username}</p>
-                <p className='tag'>{tag}</p>
-                <p className='location'>{location}</p>
+                <p className={css.name}>{username}</p>
+                <p className={css.tag}>{tag}</p>
+                <p className={css.location}>{location}</p>
             </div>
 
-            <ul className='statslist'>
+            <ul className={css.statslist}>
 
-                <li className='statslist-item'>
+                <li className={css.statslist_item}>
                     <span className='label'>Followers</span>
                     <span className="quantity">{stats.followers}</span>
                 </li>
 
-                <li className='statslist-item'>
+                <li className={css.statslist_item}>
                     <span className='label'>Views</span>
                     <span className="quantity">{stats.views}</span>
                 </li>
 
-                <li className='statslist-item'>
+                <li className={css.statslist_item}>
                     <span className='label'>Likes</span>
                     <span className="quantity">{stats.likes}</span>
                 </li>
