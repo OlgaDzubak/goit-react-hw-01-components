@@ -1,6 +1,7 @@
 import React from 'react';
 import css from './statistics.module.css'
 import propTypes from 'prop-types';
+import {getRandomHexColor} from './statictics'
 
 export const Statistics =({stats, title}) => {
     const dinamicWidth = 'calc(100% / ' + stats.length + ')';
@@ -28,7 +29,5 @@ Statistics.propTypes = {
     percentage: propTypes.number,
 }
 
-function getRandomHexColor() {
-    return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, 0)}`;
-}
+
 
