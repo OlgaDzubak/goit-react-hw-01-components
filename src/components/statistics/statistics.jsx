@@ -2,13 +2,11 @@ import React from 'react';
 import css from './statistics.module.css'
 import propTypes from 'prop-types';
 
-export const Statistics =({stats}) => {
+export const Statistics =({stats, title}) => {
     const dinamicWidth = 'calc(100% / ' + stats.length + ')';
     return (
         <section className={css.statistics}>
-
-            <h2 className={css.title}>Upload stats</h2>
-
+            { (title) && (<h2 className={css.title}>{title}</h2>)  }
             <ul className={css.statlist}>
                 {
                     stats.map(stat => (
